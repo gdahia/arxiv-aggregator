@@ -6,4 +6,4 @@ The [build script](.github/workflows/build.yml) is run by GitHub Actions to fetc
 
 ## List of Feeds
 
-Pull requests to update the list of feeds are welcome. Please only make changes to [math-aggregator.ini](math-aggregator.ini).
+Pull requests to update the list of feeds are welcome. Please only make changes to [math_aggregator.ini](math_aggregator.ini).

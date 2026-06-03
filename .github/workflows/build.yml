@@ -26,14 +26,19 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            ./math-aggregator.db
-            ./math-aggregator.db-journal
-          key: ${{ runner.os }}-${{ hashFiles('./math-aggregator.version') }}-${{ github.run_id }}
+            ./math_aggregator.db
+            ./math_aggregator.db-journal
+          key: ${{ runner.os }}-${{ hashFiles('./math_aggregator.version') }}-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-${{ hashFiles('./math-aggregator.version') }}
+            ${{ runner.os }}-${{ hashFiles('./math_aggregator.version') }}
       - name: Build
         run: |
           make build
+      - name: Verify build output
+        run: |
+          test -s build/index.html
+          grep -q 'Math Aggregator' build/index.html
+          ! grep -q 'Planet Untitled' build/index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

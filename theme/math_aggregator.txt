@@ -5,12 +5,12 @@ atom.xml    atom.xml.erb
 rss20.xml   rss.xml.erb
 opml.xml    opml.xml.erb
 
-css/math-aggregator.css
-css/math-aggregator.css.map
+css/math_aggregator.css
+css/math_aggregator.css.map
 
 icon/feed.png
 
-js/math-aggregator.js
+js/math_aggregator.js
 
 robots.txt
 android-chrome-192x192.png
